@@ -113,6 +113,22 @@ hr {
     transition: color 0.5s;
 } 
 
+.btn {
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--background-nav);
+    color: var(--enlaces);
+    box-shadow: 0 0 10px var(--enlaces);
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.5s;
+} 
+
+.btn:hover {
+    color: var(--letter-two);
+} 
+
 .nav-a:hover {
     color: var(--letter-two);
 } 
@@ -141,16 +157,16 @@ hr {
 .anima-div {
     display: flex;
     justify-content: center;
-    font-size: 70px;
+    font-size: 50px;
     max-height: 1.2em; 
     overflow: hidden;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .anima-ul {
     list-style: none;
     animation: scrollAnimation 10s infinite;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
 
 .anima-li {
@@ -163,23 +179,23 @@ hr {
     }
 
     16% {
-        margin-top: -90px;
+        margin-top: -60px;
     }
 
     32%{
-        margin-top: -180px
+        margin-top: -120px
     }
 
     48% {
-        margin-top: -270px;
-    }
-
-    64% {
         margin-top: -180px;
     }
 
+    64% {
+        margin-top: -120px;
+    }
+
     80% {
-        margin-top: -90px;
+        margin-top: -60px;
     }
 
     100% {
@@ -408,6 +424,45 @@ hr {
         top: 0;
         left: 0;
     }
+
+    .anima-div {
+        display: flex;
+        justify-content: center;
+        font-size: 70px;
+        max-height: 1.2em; 
+        overflow: hidden;
+        margin-bottom: 8rem;
+    }
+
+    @keyframes scrollAnimation {
+        0% {
+            margin-top: 0;
+        }
+    
+        16% {
+            margin-top: -90px;
+        }
+    
+        32%{
+            margin-top: -180px
+        }
+    
+        48% {
+            margin-top: -270px;
+        }
+    
+        64% {
+            margin-top: -180px;
+        }
+    
+        80% {
+            margin-top: -90px;
+        }
+    
+        100% {
+            margin-top: 0;
+        }
+    }
     
     .container {
         display: grid;
@@ -447,9 +502,44 @@ hr {
         align-items: center;
     }
 
-    /* .anima-div{
-        margin-left: 12srem;
-    } */
+    .anima-div {
+        display: flex;
+        justify-content: center;
+        font-size: 70px;
+        max-height: 1.2em; 
+        overflow: hidden;
+        margin-bottom: 8rem;
+    }
+
+    @keyframes scrollAnimation {
+        0% {
+            margin-top: 0;
+        }
+    
+        16% {
+            margin-top: -90px;
+        }
+    
+        32%{
+            margin-top: -180px
+        }
+    
+        48% {
+            margin-top: -270px;
+        }
+    
+        64% {
+            margin-top: -180px;
+        }
+    
+        80% {
+            margin-top: -90px;
+        }
+    
+        100% {
+            margin-top: 0;
+        }
+    }
 
     .sec {
         display: none;
