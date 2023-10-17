@@ -35,7 +35,7 @@ function activeNav() {
     })
 
     ancor5.addEventListener("click", function() {
-        console.log(nav.classList.toggle("nav")); 
+        nav.classList.toggle("nav"); 
     })
 }
 
