@@ -299,6 +299,7 @@ hr {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 10px var(--background-nav);
+    flex: 1 0 auto;
 }
 
 .sec3-div2 {
@@ -365,6 +366,10 @@ hr {
 
 .sec-5 {
     margin: 10rem 2rem 10rem;
+}
+
+.sec5-div1 {
+    margin-bottom: 20rem;
 }
 
 .sec5-h2 {
