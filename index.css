@@ -1,10 +1,11 @@
 :root {
     --background-page: #003249;
-    --background-nav: #AB87FF;
-    --enlaces: #cbb5ff; 
+    --background-nav: #51E5FF;
+    --enlaces: #003249; 
     --letter-one: #51E5FF;
     --letter-two: #FF1053;
     --letter-thre: #FFFD82;
+    --shadow: #104760;
 }
 
 * {
@@ -121,7 +122,7 @@ hr {
     margin-top: 1rem;
     background-color: var(--background-nav);
     color: var(--enlaces);
-    box-shadow: 0 0 10px var(--enlaces);
+    box-shadow: 0 0 10px var(--shadow);
     font-size: 15px;
     cursor: pointer;
     transition: color 0.5s;
@@ -212,6 +213,10 @@ hr {
     text-decoration: none;
 }
 
+.sec-1__text-p {
+    color: var(--letter-two);
+}
+
 .text-ul {
     display: flex;
     justify-content: space-around;
@@ -223,7 +228,7 @@ hr {
 .text-li {
     width: 2rem;
     height: 2rem;
-    background-color: var(--enlaces);
+    background-color: var(--letter-thre);
     display: flex;
     justify-content: center;
     align-items: center;
