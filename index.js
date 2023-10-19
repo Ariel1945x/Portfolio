@@ -39,4 +39,19 @@ function activeNav() {
     })
 }
 
+function email() {
+    const formDom = document.querySelector('.form')
+    const ancorDom = document.querySelector('.theEnd')
+
+    formDom.addEventListener('submit', handleSubmit)
+
+    function handleSubmit (e) {
+        e.preventDefault()
+        const from = new FormData(this)
+        ancorDom.setAttribute('href', `mailto:aeriael43@gmail.com?subject=${from.get('name')}&body=${from.get('msg')}`)
+        ancorDom.click()
+    }
+}
+
 activeNav()
+email()

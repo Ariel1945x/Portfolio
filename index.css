@@ -5,7 +5,7 @@
     --letter-one: #51E5FF;
     --letter-two: #FF1053;
     --letter-thre: #FFFD82;
-    --shadow: #104760;
+    --shadow: #326982;
 }
 
 * {
@@ -32,7 +32,7 @@ hr {
 .sec {
     width: 3rem;
     height: 3rem;
-    background-color: var(--letter-one);
+    background-color: var(--enlaces);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@ hr {
 }
 
 .sec:hover {
-    background-color: var(--letter-two);
+    background-color: var(--letter-one);
 }
 
 .nav-off {
@@ -64,7 +64,7 @@ hr {
 }
 
 .nav-div1 {
-    background-color: var(--enlaces);
+    background-color: var(--shadow);
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -286,7 +286,7 @@ hr {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -295,11 +295,22 @@ hr {
     background-color: var(--background-page);
     width: 75%;
     height: 20rem;
-    margin: 1rem 0;
+    margin: 0 1rem;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 10px var(--background-nav);
     flex: 1 0 auto;
+    object-fit: cover;
+    animation: slide 35s linear infinite alternate;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(330%); 
+    }
+    50%{
+        transform: translateX(-330%);
+    }
 }
 
 .sec3-div2 {
@@ -384,6 +395,63 @@ hr {
     color: var(--letter-two);
     margin-top: 10rem;
     margin-bottom: 4rem;
+}
+
+.sec5-secform {
+    height: 350px;
+    width: auto;
+    margin-bottom: 5rem;
+}
+
+.form {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form > *:not([type="submit"]):not(label) {
+    font-size: 15px;
+    color: var(--background-nav);
+    background-color: var(--background-page);
+    border: none;
+    border-bottom: 1px solid var(--letter-thre);
+    border-left: 1px solid var(--letter-thre);
+    padding: 0 10px;
+    outline: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.form > *:not([type="submit"]):not(label):hover {
+    border-bottom: 1px solid var(--letter-two);
+    border-left: 1px solid var(--letter-two);
+}
+
+.form > *:not(.form-input3) {
+    width: auto;
+    height: 2rem;
+}
+
+.form-input4 {
+    border-radius: 205px;
+    border: 1px solid var(--letter-thre);
+    background-color: var(--background-page);
+    color: var(--letter-one);
+    padding: 5px;
+    margin-top: 1rem;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.form-input4:hover {
+    border: 1px solid var(--letter-two);
+}
+
+label {
+    color: var(--letter-one);
+    padding-bottom: 1rem;
 }
 
 .sec5-p {
@@ -477,20 +545,30 @@ hr {
     }
     
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-auto-rows: auto;
-        place-items: center;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding: 0 3rem;
     }
 
     .sec3-div1 {
-        background-color: var(--background-page);
-        width: 20rem;
-        height: 20rem;
-        margin: 1rem 0;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 0 10px var(--background-nav);
+        width: 300px;
+        height: 300px;
+        margin: 0 10px;
+        flex: 1 0 auto;
+        object-fit: cover;
+        animation: slide 25s linear infinite alternate;
+    }
+
+    @keyframes slide {
+        0%, 100% {
+            transform: translateX(250%); 
+        }
+        50%{
+            transform: translateX(-250%);
+        }
     }
 
     .sec5-div1 {
@@ -498,6 +576,61 @@ hr {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         place-items: center;
+    }
+
+    .sec5-secform {
+        height: 350px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form {
+        height: inherit;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .form > *:not([type="submit"]):not(label) {
+        font-size: 15px;
+        color: var(--background-nav);
+        background-color: var(--background-page);
+        border: none;
+        border-bottom: 1px solid var(--letter-thre);
+        border-left: 1px solid var(--letter-thre);
+        padding: 0 5px;
+        outline: none;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    
+    .form > *:not([type="submit"]):not(label):hover {
+        border-bottom: 1px solid var(--letter-two);
+        border-left: 1px solid var(--letter-two);
+    }
+    
+    .form > *:not(.form-input3) {
+        width: auto;
+        height: 2rem;
+    }
+    
+    .form-input4 {
+        background-color: var(--background-page);
+        color: var(--letter-one);
+        border-radius: 205px;
+        border: 1px solid var(--letter-thre);
+        padding: 5px;
+        margin-top: 1rem;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.5s ease;
+    }
+    
+    .form-input4:hover {
+        border: 1px solid var(--letter-two);
     }
 }
 
@@ -588,22 +721,32 @@ hr {
         left: 0;
         box-shadow: 0 0 15px var(--enlaces);
     }
-    
+
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr; 
-        grid-auto-rows: auto;
-        place-items: center;
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding: 0 3rem;
     }
 
     .sec3-div1 {
-        background-color: var(--background-page);
-        width: 20rem;
-        height: 20rem;
-        margin: 1rem 0;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 0 10px var(--background-nav);
+        width: 300px;
+        height: 300px;
+        margin: 0 10px;
+        flex: 1 0 auto;
+        object-fit: cover;
+        animation: slide 25s linear infinite alternate;
+    }
+
+    @keyframes slide {
+        0%, 100% {
+            transform: translateX(225%); 
+        }
+        50%{
+            transform: translateX(-220%);
+        }
     }
 
     .sec5-div1 {
