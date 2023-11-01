@@ -61,6 +61,7 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
 }
 
 .nav-div1 {
@@ -490,7 +491,7 @@ label {
     background-color: var(--letter-two);
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
 
     .nav {
         background-color: var(--background-nav);
@@ -634,8 +635,7 @@ label {
     }
 }
 
-@media screen and (min-width: 1150px) {
-
+@media screen and (min-width: 1024px) {
     hr {
         margin-left: 23rem;
     }
@@ -729,6 +729,7 @@ label {
         flex-wrap: nowrap;
         overflow: hidden;
         padding: 0 3rem;
+        margin: 0 2.5rem;
     }
 
     .sec3-div1 {
