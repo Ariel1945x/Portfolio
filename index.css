@@ -636,9 +636,6 @@ label {
 }
 
 @media screen and (min-width: 1024px) {
-    hr {
-        margin-left: 23rem;
-    }
 
     .div-title {
         display: flex;
@@ -757,23 +754,7 @@ label {
         place-items: center;
     }
 
-    .sec-1 {
-        margin-left: 23rem;
-    }
-
-    .sec-2 {
-        margin-left: 23rem;
-    }
-
-    .sec3 {
-        margin-left: 23rem;
-    }
-
-    .sec-4 {
-        margin-left: 23rem;
-    }
-
-    .sec-5 {
-        margin-left: 23rem;
+    .sec-1, .sec-2, .sec3, .sec-4, .sec-5, hr {
+        margin-left: 25rem;
     }
 }
